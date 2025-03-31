@@ -578,3 +578,89 @@ footer {
         column-count: 1;
     }
 }
+
+.filter-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: rgba(27, 75, 67, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(27, 75, 67, 0.2);
+}
+
+.filter-section h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.clear-filters {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.clear-filters:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tag {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+    background-color: rgba(27, 75, 67, 0.2);
+}
+
+.tag.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.filter-instructions {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.filter-instructions .tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin: 0 0.2rem;
+    cursor: default;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .filter-instructions {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+}

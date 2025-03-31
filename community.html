@@ -14,7 +14,7 @@
                 <li><a href="index.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="community.html" class="active">Community</a></li>
-                <li><a href="rhighamResume.pdf" target="_blank">Resume/CV</a></li>
+                <li><a href="rhighamResume.pdf" target="_blank">CV</a></li>
             </ul>
         </div>
     </nav>
@@ -23,11 +23,17 @@
         <section class="intro">
             <div class="container">
                 <h1 class="big-title">Community</h1>
+                <h3 class="filter-instructions">Click on a <span class="tag">Pill</span> to Filter by Type & Topics</h3>
             </div>
         </section>
 
         <section class="presentations">
             <div class="container">
+                <div class="filter-section">
+                    <div id="active-filters" class="active-filters"></div>
+                    <button id="clear-filters" class="clear-filters" style="display: none;">Clear All Filters</button>
+                </div>
+
                 <h2>Conference Talks</h2>
                 <div class="projects-grid">
                     <div class="project-card">
@@ -167,5 +173,72 @@
             <p>&copy; 2024 Robert Higham</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const activeFilters = new Set();
+            const activeFiltersContainer = document.getElementById('active-filters');
+            const clearFiltersButton = document.getElementById('clear-filters');
+            
+            // Make all tags clickable
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const filter = this.textContent;
+                    
+                    if (activeFilters.has(filter)) {
+                        // Remove filter
+                        activeFilters.delete(filter);
+                        this.classList.remove('active');
+                    } else {
+                        // Add filter
+                        activeFilters.add(filter);
+                        this.classList.add('active');
+                    }
+                    
+                    updateFilters();
+                    filterProjects();
+                });
+            });
+
+            // Clear all filters
+            clearFiltersButton.addEventListener('click', function() {
+                activeFilters.clear();
+                document.querySelectorAll('.tag').forEach(tag => tag.classList.remove('active'));
+                updateFilters();
+                filterProjects();
+            });
+
+            function updateFilters() {
+                clearFiltersButton.style.display = activeFilters.size > 0 ? 'block' : 'none';
+            }
+
+            function filterProjects() {
+                const projectCards = document.querySelectorAll('.project-card');
+                let visibleCount = 0;
+
+                projectCards.forEach(card => {
+                    if (activeFilters.size === 0) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                        return;
+                    }
+
+                    const cardTags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent);
+                    const hasAllFilters = Array.from(activeFilters).every(filter => cardTags.includes(filter));
+                    card.style.display = hasAllFilters ? 'block' : 'none';
+                    if (hasAllFilters) visibleCount++;
+                });
+
+                // Handle empty sections
+                document.querySelectorAll('.projects-grid').forEach(grid => {
+                    const visibleInGrid = Array.from(grid.querySelectorAll('.project-card')).filter(card => card.style.display !== 'none').length;
+                    const sectionTitle = grid.previousElementSibling;
+                    if (sectionTitle && sectionTitle.tagName === 'H2') {
+                        sectionTitle.style.display = visibleInGrid > 0 ? 'block' : 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html> 
