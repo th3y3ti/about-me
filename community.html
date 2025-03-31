@@ -23,7 +23,7 @@
         <section class="intro">
             <div class="container">
                 <h1 class="big-title">Community</h1>
-                <h3 class="filter-instructions">Click on a <span class="tag">Pill</span> to Filter by Type & Topics</h3>
+                <h3 class="filter-instructions">Click on a <span class="tag">Pill</span> to Filter by Skills & Technologies</h3>
             </div>
         </section>
 
@@ -169,44 +169,38 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>SOC-in-a-box</h3>
-                        <p class="presentation-meta">Open Source Project • 2024</p>
-                        <p>An AI-powered platform designed to revolutionize Security Operations Center (SOC) workflows through intelligent automation. Features include detection engineering automation, alert triage support, investigation assistance, knowledge management, proactive hunting, controls validation, and compliance mapping.</p>
+                        <p class="presentation-meta">Security Operations Center (SOC) Automation Framework</p>
+                        <p>A comprehensive framework for automating SOC operations, including detection engineering, incident response, and threat hunting. Built with Python and integrates with popular security tools.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">GenAI</span>
-                            <span class="tag">Security Operations</span>
+                            <span class="tag">Security Engineering</span>
                             <span class="tag">Automation</span>
-                            <span class="tag">MITRE ATT&CK</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/th3y3ti/soc_in_a_box" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/th3y3ti/soc-in-a-box" target="_blank">View on GitHub</a>
                         </div>
                     </div>
-
                     <div class="project-card">
                         <h3>Finian (finian.ai)</h3>
-                        <p class="presentation-meta">Open Source Project • 2024</p>
-                        <p>An AI-enhanced virtual assistant that provides near real-time insights for confident trading decisions. Integrates personal trading history with market data, company financials, and news. Features include transaction analysis, market data insights, news aggregation, and company profiling.</p>
+                        <p class="presentation-meta">AI-Powered Security Analysis Tool</p>
+                        <p>An AI-powered tool that helps security analysts investigate and respond to security incidents more efficiently. Leverages machine learning for pattern recognition and automated analysis.</p>
                         <div class="project-tags">
-                            <span class="tag">GenAI</span>
-                            <span class="tag">Financial Analysis</span>
-                            <span class="tag">Market Data</span>
-                            <span class="tag">Trading Assistant</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Security Engineering</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/th3y3ti/finian" target="_blank">View on GitHub</a>
                         </div>
                     </div>
-
                     <div class="project-card">
                         <h3>StoryLord</h3>
-                        <p class="presentation-meta">Open Source Project • 2024</p>
-                        <p>A collaborative storytelling platform leveraging AI to enhance creative writing and narrative development. Enables writers to craft and explore stories with AI assistance while maintaining creative control.</p>
+                        <p class="presentation-meta">Threat Intelligence Visualization Tool</p>
+                        <p>A visualization tool for threat intelligence data that helps analysts understand and communicate complex attack patterns and relationships between different security events.</p>
                         <div class="project-tags">
-                            <span class="tag">GenAI</span>
-                            <span class="tag">Creative Writing</span>
-                            <span class="tag">Storytelling</span>
-                            <span class="tag">Collaboration</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Threat Intelligence</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/th3y3ti/storylord" target="_blank">View on GitHub</a>
@@ -228,24 +222,13 @@
             const activeFilters = new Set();
             const activeFiltersContainer = document.getElementById('active-filters');
             const clearFiltersButton = document.getElementById('clear-filters');
+            const filterSection = document.querySelector('.filter-section');
             
             // Make all tags clickable
             document.querySelectorAll('.tag').forEach(tag => {
                 tag.addEventListener('click', function() {
                     const filter = this.textContent;
-                    
-                    if (activeFilters.has(filter)) {
-                        // Remove filter
-                        activeFilters.delete(filter);
-                        this.classList.remove('active');
-                    } else {
-                        // Add filter
-                        activeFilters.add(filter);
-                        this.classList.add('active');
-                    }
-                    
-                    updateFilters();
-                    filterProjects();
+                    toggleFilter(filter, this);
                 });
             });
 
@@ -257,8 +240,29 @@
                 filterProjects();
             });
 
+            function toggleFilter(filter, element) {
+                if (activeFilters.has(filter)) {
+                    // Remove filter
+                    activeFilters.delete(filter);
+                    element.classList.remove('active');
+                } else {
+                    // Add filter
+                    activeFilters.add(filter);
+                    element.classList.add('active');
+                }
+                
+                updateFilters();
+                filterProjects();
+            }
+
             function updateFilters() {
-                clearFiltersButton.style.display = activeFilters.size > 0 ? 'block' : 'none';
+                if (activeFilters.size > 0) {
+                    filterSection.classList.add('has-filters');
+                    clearFiltersButton.style.display = 'block';
+                } else {
+                    filterSection.classList.remove('has-filters');
+                    clearFiltersButton.style.display = 'none';
+                }
             }
 
             function filterProjects() {

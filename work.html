@@ -285,7 +285,13 @@
             }
 
             function updateFilters() {
-                clearFiltersButton.style.display = activeFilters.size > 0 ? 'block' : 'none';
+                if (activeFilters.size > 0) {
+                    filterSection.classList.add('has-filters');
+                    clearFiltersButton.style.display = 'block';
+                } else {
+                    filterSection.classList.remove('has-filters');
+                    clearFiltersButton.style.display = 'none';
+                }
             }
 
             function filterProjects() {
