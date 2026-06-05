@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community - Robert Higham</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Community | Robert Higham</title>
+    <link rel="stylesheet" href="styles.css?v=2.2">
 </head>
+
 <body>
     <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-links">
+        <div class="container nav-container">
+            <div class="brand">
+                <a href="index.html">rhigham<span>.security</span></a>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="index.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
                 <li><a href="rhighamResume.pdf" target="_blank">CV</a></li>
             </ul>
         </div>
@@ -23,22 +28,28 @@
         <section class="intro">
             <div class="container">
                 <h1 class="big-title">Community</h1>
-                <h3 class="filter-instructions">Click on a <span class="tag">Pill</span> to Filter by Skills & Technologies</h3>
+                <p class="filter-instructions">Click on a <span class="tag">Pill</span> below to filter talks, podcasts, and open source projects</p>
             </div>
         </section>
 
         <section class="presentations">
             <div class="container">
+                <!-- Filter Panel -->
                 <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Active Filters:</span>
+                        <button id="clear-filters" class="clear-filters">Clear All</button>
+                    </div>
                     <div id="active-filters" class="active-filters"></div>
-                    <button id="clear-filters" class="clear-filters" style="display: none;">Clear All Filters</button>
                 </div>
 
                 <h2>Conference Talks</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>State of Cybersecurity Risk</h3>
-                        <p class="presentation-meta">Mimecast TechConnect Summit, Dallas • October 24, 2023</p>
+                        <div class="project-header">
+                            <h3>State of Cybersecurity Risk</h3>
+                            <p class="presentation-meta">Mimecast TechConnect Summit • Dallas • 2023</p>
+                        </div>
                         <p>Explored evolving approaches to cybersecurity risk, technology partnerships for visibility, and methods for quantifying human risk in security programs.</p>
                         <div class="project-tags">
                             <span class="tag">Conference</span>
@@ -47,9 +58,12 @@
                             <span class="tag">Security Strategy</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Threat Hunting: How to Grow and Retain Cyber Security Ninjas</h3>
-                        <p class="presentation-meta">Dallas Cybersecurity Conference • 2023</p>
+                        <div class="project-header">
+                            <h3>Threat Hunting: How to Grow and Retain Cyber Security Ninjas</h3>
+                            <p class="presentation-meta">Dallas Cybersecurity Conference • Dallas • 2023</p>
+                        </div>
                         <p>Focused on strategies for developing and retaining top talent in threat hunting teams, sharing practical approaches to team building and skill development.</p>
                         <div class="project-tags">
                             <span class="tag">Conference</span>
@@ -58,9 +72,12 @@
                             <span class="tag">Leadership</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Retaining Talent and Enhancing Threat Hunting Strategies</h3>
-                        <p class="presentation-meta">CISOXC Dallas (DFWSecCon) • March 28, 2023</p>
+                        <div class="project-header">
+                            <h3>Retaining Talent and Enhancing Threat Hunting Strategies</h3>
+                            <p class="presentation-meta">CISOXC Dallas (DFWSecCon) • Dallas • 2023</p>
+                        </div>
                         <p>Addressed the challenges of cybersecurity in remote/hybrid environments and cloud adoption, focusing on talent retention strategies and effective threat hunting techniques. Discussed the impact on cybersecurity insurance and practical approaches to enhance security posture.</p>
                         <div class="project-tags">
                             <span class="tag">Conference</span>
@@ -69,9 +86,12 @@
                             <span class="tag">Cloud Security</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Balancing Threats and Budgets</h3>
-                        <p class="presentation-meta">North Texas ISSA Lunch and Learn • May 18, 2023</p>
+                        <div class="project-header">
+                            <h3>Balancing Threats and Budgets</h3>
+                            <p class="presentation-meta">North Texas ISSA Lunch and Learn • Dallas • 2023</p>
+                        </div>
                         <p>Panel discussion on addressing increasing cybersecurity threats in the context of decreasing budgets, sharing practical strategies for maximizing security investments.</p>
                         <div class="project-tags">
                             <span class="tag">Panel</span>
@@ -80,9 +100,12 @@
                             <span class="tag">Risk Management</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Threat Hunting: What it Is and Isn't</h3>
-                        <p class="presentation-meta">ElevateIT: Houston Technology Summit • September 14, 2022</p>
+                        <div class="project-header">
+                            <h3>Threat Hunting: What it Is and Isn't</h3>
+                            <p class="presentation-meta">ElevateIT: Houston Technology Summit • Houston • 2022</p>
+                        </div>
                         <p>Comprehensive overview of threat hunting, covering detection engineering, differentiation from monitoring, pen test triggers, and the importance of strategic approach. Discussed SOC integration and advanced hunting techniques.</p>
                         <div class="project-tags">
                             <span class="tag">Conference</span>
@@ -96,8 +119,10 @@
                 <h2>Podcast Appearances</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>SIEM vs XDR Panel Discussion</h3>
-                        <p class="presentation-meta">Virtual Panel • 2024</p>
+                        <div class="project-header">
+                            <h3>SIEM vs XDR Panel Discussion</h3>
+                            <p class="presentation-meta">Virtual Panel • 2024</p>
+                        </div>
                         <p>Panel discussion comparing SIEM and XDR technologies, exploring their roles in modern security operations.</p>
                         <div class="project-tags">
                             <span class="tag">Panel</span>
@@ -106,9 +131,12 @@
                             <span class="tag">Security Tools</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Threats and Danger: Threat Hunting</h3>
-                        <p class="presentation-meta">Forged in Security Podcast • October 17, 2022</p>
+                        <div class="project-header">
+                            <h3>Threats and Danger: Threat Hunting</h3>
+                            <p class="presentation-meta">Forged in Security Podcast • Episode • 2022</p>
+                        </div>
                         <p>Discussed proactive threat neutralization approaches using data, tools, and logic, drawing from extensive cyber intelligence background to inform threat hunting strategies.</p>
                         <div class="project-tags">
                             <span class="tag">Podcast</span>
@@ -116,9 +144,12 @@
                             <span class="tag">Threat Hunting</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>The Importance of Threat Hunting</h3>
-                        <p class="presentation-meta">Let's Talk SOC (Cybercrime Magazine Podcast)</p>
+                        <div class="project-header">
+                            <h3>The Importance of Threat Hunting</h3>
+                            <p class="presentation-meta">Let's Talk SOC • Cybercrime Magazine Podcast</p>
+                        </div>
                         <p>Explored threat hunting fundamentals, intelligence-driven approaches, post-compromise activity detection, and methods for measuring hunting program success.</p>
                         <div class="project-tags">
                             <span class="tag">Podcast</span>
@@ -127,9 +158,12 @@
                             <span class="tag">Metrics</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Counter Threat Unit Spotlight</h3>
-                        <p class="presentation-meta">Two Minute Tuesday w/ Blair & Allyssa • 2021</p>
+                        <div class="project-header">
+                            <h3>Counter Threat Unit Spotlight</h3>
+                            <p class="presentation-meta">Two Minute Tuesday w/ Blair & Allyssa • Interview • 2021</p>
+                        </div>
                         <p>Interview discussing role as a threat researcher, sharing insights on threat intelligence, threat hunting, and personal experiences including encounters with notable threats like the I Love You virus.</p>
                         <div class="project-tags">
                             <span class="tag">Interview</span>
@@ -142,9 +176,11 @@
                 <h2>Webcasts</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Threat Hunting 101: Building and Maintaining a Threat Hunting Program</h3>
-                        <p class="presentation-meta">Comprehensive Training Series • 2021</p>
-                        <p>Delivered an extensive six-module training series designed to guide organizations through establishing and scaling their threat hunting capabilities. The curriculum covered program foundations, operational frameworks, tool selection, and advanced hunting techniques. Special emphasis on practical implementation strategies, ROI measurement, and building internal expertise versus leveraging external partnerships.</p>
+                        <div class="project-header">
+                            <h3>Threat Hunting 101: Building & Maintaining a Program</h3>
+                            <p class="presentation-meta">Comprehensive Training Series • Host • 2021</p>
+                        </div>
+                        <p>Delivered an extensive six-module training series designed to guide organizations through establishing and scaling their threat hunting capabilities. The curriculum covered program foundations, operational frameworks, tool selection, and advanced hunting techniques.</p>
                         <div class="project-tags">
                             <span class="tag">Webcast</span>
                             <span class="tag">Training</span>
@@ -152,9 +188,12 @@
                             <span class="tag">Program Development</span>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Ready, Fire, Aim? Why Organizations Struggle with Threat Hunting</h3>
-                        <p class="presentation-meta">Secureworks Webcast • August 12, 2020</p>
+                        <div class="project-header">
+                            <h3>Why Organizations Struggle with Threat Hunting</h3>
+                            <p class="presentation-meta">Secureworks Webcast • Speaker • 2020</p>
+                        </div>
                         <p>Addressed common misperceptions in threat hunting, emphasizing the importance of strategy, progress measurement, and understanding targets before taking action.</p>
                         <div class="project-tags">
                             <span class="tag">Webcast</span>
@@ -167,9 +206,11 @@
 
                 <h2>Open Source Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>SOC-in-a-Box</h3>
-                        <p class="presentation-meta">Security Operations Center (SOC) Automation Framework</p>
+                    <div class="project-card" data-video="dQw4w9WgXcQ">
+                        <div class="project-header">
+                            <h3>SOC-in-a-Box</h3>
+                            <p class="presentation-meta">GitHub Repository • Python / Automation</p>
+                        </div>
                         <p>A comprehensive framework for automating SOC operations, including detection engineering, incident response, and threat hunting. Built with Python and integrates with popular security tools.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -177,12 +218,15 @@
                             <span class="tag">Automation</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/th3y3ti/soc_in_a_box" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/th3y3ti/soc_in_a_box" target="_blank">View on GitHub →</a>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>Finian (finian.ai)</h3>
-                        <p class="presentation-meta">AI-Powered Security Analysis Tool</p>
+                        <div class="project-header">
+                            <h3>Finian (finian.ai)</h3>
+                            <p class="presentation-meta">GitHub Repository • Python / ML</p>
+                        </div>
                         <p>An AI-powered tool that helps security analysts investigate and respond to security incidents more efficiently. Leverages machine learning for pattern recognition and automated analysis.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -190,12 +234,15 @@
                             <span class="tag">Security Engineering</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/th3y3ti/finian" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/th3y3ti/finian" target="_blank">View on GitHub →</a>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <h3>StoryLord</h3>
-                        <p class="presentation-meta">Threat Intelligence Visualization Tool</p>
+                        <div class="project-header">
+                            <h3>StoryLord</h3>
+                            <p class="presentation-meta">GitHub Repository • JS / Data Viz</p>
+                        </div>
                         <p>A visualization tool for threat intelligence data that helps analysts understand and communicate complex attack patterns and relationships between different security events.</p>
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
@@ -203,7 +250,7 @@
                             <span class="tag">Threat Intelligence</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/th3y3ti/storylord" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/th3y3ti/storylord" target="_blank">View on GitHub →</a>
                         </div>
                     </div>
                 </div>
@@ -213,85 +260,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Robert Higham</p>
+            <p>&copy; 2026 Robert Higham. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const activeFilters = new Set();
-            const activeFiltersContainer = document.getElementById('active-filters');
-            const clearFiltersButton = document.getElementById('clear-filters');
-            const filterSection = document.querySelector('.filter-section');
-            
-            // Make all tags clickable
-            document.querySelectorAll('.tag').forEach(tag => {
-                tag.addEventListener('click', function() {
-                    const filter = this.textContent;
-                    toggleFilter(filter, this);
-                });
-            });
-
-            // Clear all filters
-            clearFiltersButton.addEventListener('click', function() {
-                activeFilters.clear();
-                document.querySelectorAll('.tag').forEach(tag => tag.classList.remove('active'));
-                updateFilters();
-                filterProjects();
-            });
-
-            function toggleFilter(filter, element) {
-                if (activeFilters.has(filter)) {
-                    // Remove filter
-                    activeFilters.delete(filter);
-                    element.classList.remove('active');
-                } else {
-                    // Add filter
-                    activeFilters.add(filter);
-                    element.classList.add('active');
-                }
-                
-                updateFilters();
-                filterProjects();
-            }
-
-            function updateFilters() {
-                if (activeFilters.size > 0) {
-                    filterSection.classList.add('has-filters');
-                    clearFiltersButton.style.display = 'block';
-                } else {
-                    filterSection.classList.remove('has-filters');
-                    clearFiltersButton.style.display = 'none';
-                }
-            }
-
-            function filterProjects() {
-                const projectCards = document.querySelectorAll('.project-card');
-                let visibleCount = 0;
-
-                projectCards.forEach(card => {
-                    if (activeFilters.size === 0) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                        return;
-                    }
-
-                    const cardTags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent);
-                    const hasAllFilters = Array.from(activeFilters).every(filter => cardTags.includes(filter));
-                    card.style.display = hasAllFilters ? 'block' : 'none';
-                    if (hasAllFilters) visibleCount++;
-                });
-
-                // Handle empty sections
-                document.querySelectorAll('.projects-grid').forEach(grid => {
-                    const visibleInGrid = Array.from(grid.querySelectorAll('.project-card')).filter(card => card.style.display !== 'none').length;
-                    const sectionTitle = grid.previousElementSibling;
-                    if (sectionTitle && sectionTitle.tagName === 'H2') {
-                        sectionTitle.style.display = visibleInGrid > 0 ? 'block' : 'none';
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

@@ -4,18 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Higham</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Robert Higham | Cybersecurity Leader & Architect</title>
+    <link rel="stylesheet" href="styles.css?v=2.2">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Robert Higham",
+      "jobTitle": "Cybersecurity Leader & Security Architect",
+      "url": "https://th3y3ti.github.io/about-me/",
+      "sameAs": [
+        "https://github.com/th3y3ti",
+        "https://www.linkedin.com/" 
+      ],
+      "knowsAbout": [
+        "Cybersecurity Program Strategy",
+        "Detection Engineering",
+        "Threat Hunting",
+        "ISO 27001 Auditing",
+        "Security Architecture & Automation",
+        "Generative AI in Cyber Operations",
+        "Risk Management"
+      ],
+      "description": "Cybersecurity leader and security architect with over 20 years of experience building resilient security programs and optimizing detection engineering operations."
+    }
+    </script>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-links">
+        <div class="container nav-container">
+            <div class="brand">
+                <a href="index.html">rhigham<span>.security</span></a>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="index.html" class="active">About</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="community.html">Community</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
                 <li><a href="rhighamResume.pdf" target="_blank">CV</a></li>
             </ul>
         </div>
@@ -24,7 +50,29 @@
     <main>
         <section class="intro">
             <div class="container">
-                <h1 class="big-title">Hi,I'm Robert.</h1>
+                <h1 class="big-title">Hi, I'm Robert.</h1>
+                <p class="filter-instructions">Cybersecurity Leader • Detection Engineer • Security Architect</p>
+                
+                <!-- Interactive Terminal Container -->
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                        <div class="terminal-title">yeti-sec@terminal: ~</div>
+                        <div style="width: 52px;"></div> <!-- Spacer to balance dots -->
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <pre class="terminal-output" id="terminal-output"></pre>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">robert@yeti-sec:~$</span>
+                            <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" autofocus>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -37,12 +85,9 @@
                         </div>
                     </div>
                     <div class="about-content">
-                        <h2>I build resilient cybersecurity programs and train cybersecurity ninjas.</h2>
-                        <p> With over 20 years of experience, I specialize in detection engineering, risk management,
-                            and security architecture. My work spans multiple sectors including manufacturing, finance,
-                            and technology, where I've served both as an in-house expert and trusted vendor partner.</p>
-                        <p>My latest focus is on developing innovative cybersecurity strategies leveraging AI, helping
-                            organizations navigate and thrive in the rapidly evolving digital landscape.</p>
+                        <h2>I build resilient security programs and train cybersecurity ninjas.</h2>
+                        <p>With over 20 years of experience, I specialize in detection engineering, threat hunting, risk management, and security architecture. My work spans manufacturing, finance, and technology, serving both as an in-house leader and a trusted vendor partner.</p>
+                        <p>My latest focus is on developing innovative cybersecurity strategies leveraging Generative AI, helping organizations navigate and thrive in the rapidly evolving threat landscape.</p>
                     </div>
                 </div>
             </div>
@@ -50,46 +95,59 @@
 
         <section class="history">
             <div class="container">
-                <h2>A brief history</h2>
-                <div class="history-content">
-                    <p>My career has been characterized by a passion for risk mitigation and a drive to leverage
-                        technological advancements for improvement, resulting in consistently impactful solutions. I've
-                        automated critical call center processes, architected IT infrastructures in manufacturing, built
-                        robust cybersecurity programs within a Fortune 20 financial institution, and developed highly
-                        profitable customer-facing cybersecurity services for a leading technology company.</p>
+                <h2>A Brief History</h2>
+                <div class="timeline">
+                    <!-- Item 1: Early Career -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-icon"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Early Foundations & Automation</h3>
+                            <div class="timeline-meta">1999 — 2007 • Systems Admin & CRM Developer</div>
+                            <div class="timeline-body">
+                                <p>My journey began in a high-volume call center, where I identified and automated critical workflows to boost operational throughput. Transitioning to the manufacturing sector, I built IT and network infrastructures from the ground up, integrating industrial control systems (ICS/OT) with corporate networks.</p>
+                                <p>These early years instilled a core philosophy: security and technology must align to enable business operations efficiently.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <p>My journey began in a high-volume call center where I identified and automated critical
-                        processes, significantly improving efficiency. Transitioning to the manufacturing sector, I
-                        built foundational IT infrastructures from the ground up, establishing a solid base for future
-                        technological advancements. These early experiences ingrained in me the importance of practical,
-                        results-driven technology implementation.</p>
+                    <!-- Item 2: Financial Services -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-icon"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Enterprise Cyber Leadership</h3>
+                            <div class="timeline-meta">2007 — 2019 • Fortune 20 Financial Services</div>
+                            <div class="timeline-body">
+                                <p>At a Fortune 20 financial institution, I expanded my expertise into cybersecurity program management. I led multi-year enterprise security roadmaps, coordinated large-scale IT audits, designed dual-datacenter disaster recovery setups, and established the organization's inaugural threat hunting capabilities.</p>
+                                <p>I developed risk frameworks and integrated SIEM/SOC analytics to protect critical infrastructure holding billions in assets.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <p>At a Fortune 20 financial institution, I expanded my expertise into comprehensive cybersecurity
-                        leadership. I led multi-year enterprise security initiatives, conducted rigorous internal
-                        audits, and developed strategic vendor and internal cybersecurity roadmaps. I built the
-                        Enterprise Information Security Risk Management program and spearheaded efforts to integrate and
-                        optimize security operations, ensuring robust protection for critical assets and data.</p>
+                    <!-- Item 3: Cyber Vendor CTU -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-icon"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">Detection Engineering & Consulting</h3>
+                            <div class="timeline-meta">2019 — 2025 • Leading Cybersecurity Vendor</div>
+                            <div class="timeline-body">
+                                <p>Serving as a Director and Counter Threat Unit (CTU) consultant, I engineered threat detection mechanisms, optimized hunting workflows to reduce response times by 80%, and guided enterprises through MITRE ATT&CK evaluations.</p>
+                                <p>I launched commercial threat hunting services that grew and exceeded sales expectations by 500%, delivering technical training to global SOC teams.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <p>My most recent experience at a leading cybersecurity vendor allowed me to leverage my accumulated
-                        knowledge to drive innovation in threat hunting. I automated and integrated threat hunting
-                        products and services, delivered impactful industry talks, and created highly profitable
-                        customer-facing training, sharing my leadership and expertise with a global audience.</p>
-
-                    <p>My commitment to continuous learning is rooted in a philosophy of mastery: learning a skill,
-                        certifying its proficiency, teaching it to others, and ultimately, sharing thought leadership
-                        within the community. This dedication is evidenced by my dozens of industry certifications and
-                        advanced education, including a Master's degree in Cyber Threat Intelligence, and is reinforced
-                        by my ongoing professional development. I am passionate about driving efficiency and innovation,
-                        particularly through emerging technologies, with my latest focus on mastering generative AI, a
-                        technology I believe will shape the future.</p>
-
-                    <p>While I draw upon past experiences to inform my
-                        understanding of future trends, my true passion lies in exploring and shaping what's next. I am
-                        genuinely energized by conversations about the future, often needing to temper my enthusiasm. My
-                        ultimate aspiration is to contribute meaningfully to the secure enablement of humanity's
-                        technological evolution. With this vision in mind, I am eager to apply my expertise in
-                        enterprise risk, threat and vulnerability management, and security operations along with my
-                        thirst for technology to drive impactful results and contribute to the future of technology.</p>
+                    <!-- Item 4: Philosophy and Future -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-icon"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role">AI & Secure Enablement</h3>
+                            <div class="timeline-meta">Present & Future • CISO Advisor & Threat Researcher</div>
+                            <div class="timeline-body">
+                                <p>I am dedicated to a continuous learning cycle: learning a skill, certifying it, teaching it to others, and contributing back to the security community. My current work centers on using Generative AI and automation to scale threat analysis, threat modeling, and risk compliance (e.g. ISO 27001).</p>
+                                <p>I aim to provide high-leverage Virtual CISO leadership to help teams build defense-in-depth security postures.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,9 +155,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Robert Higham</p>
+            <p>&copy; 2026 Robert Higham. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

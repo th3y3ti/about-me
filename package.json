@@ -1,0 +1,10 @@
+{
+  "name": "about-me",
+  "version": "2.2.0",
+  "description": "Portfolio of Robert Higham",
+  "scripts": {
+    "test": "node test-site.js"
+  },
+  "author": "Robert Higham",
+  "license": "ISC"
+}
