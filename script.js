@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTerminal();
     initFilterEngine();
     initVideoModal();
+    initWorkTabs();
 });
 
 /* ==========================================================================
@@ -409,4 +410,37 @@ function initVideoModal() {
         document.addEventListener('keydown', escapeClose);
     }
 }
+
+/* ==========================================================================
+   5. Work Page Tab Switcher
+   ========================================================================== */
+function initWorkTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabViews = document.querySelectorAll('.tab-view');
+
+    if (tabBtns.length === 0 || tabViews.length === 0) return;
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-target');
+
+            // Deactivate all buttons
+            tabBtns.forEach(b => b.classList.remove('active'));
+            // Activate current button
+            this.classList.add('active');
+
+            // Deactivate all views
+            tabViews.forEach(view => {
+                view.classList.remove('active');
+            });
+
+            // Activate target view
+            const targetView = document.getElementById(targetTab);
+            if (targetView) {
+                targetView.classList.add('active');
+            }
+        });
+    });
+}
+
 
