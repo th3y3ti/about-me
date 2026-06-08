@@ -114,7 +114,6 @@ Type 'help' to view available cybersecurity operational commands.
   help     - Show this operational help menu
   skills   - List core cybersecurity & technology domains
   projects - Show a index of notable portfolio projects
-  ciso     - Virtual CISO fractional services detail
   contact  - Display secure contact coordinates
   yeti     - Execute yeti.decryption.routine
   clear    - Clear terminal logs`;
@@ -135,14 +134,6 @@ Type 'help' to view available cybersecurity operational commands.
   [3] SOC-in-a-Box: Open-source SOC automation framework (Python)
   [4] Finian (finian.ai): AI-Powered security analysis tool
   To browse the full project list, navigate to 'Work' in the main menu.`;
-                break;
-            case 'ciso':
-                outputText = `Fractional & Virtual CISO Services:
-  - Strategic security blueprinting
-  - ISO 27001 pre-audits and training
-  - Threat containment and response architecture
-  - Fluent "C-Suite" communication and escalation management
-  See 'Services' page in navbar for a complete overview.`;
                 break;
             case 'contact':
                 outputText = `Contact Coordinates:
