@@ -132,7 +132,7 @@ Type 'help' to view available cybersecurity operational commands.
   [1] Escalation Redesign: Reduced missed detections from 2% to 0.4%
   [2] Threat Hunting: Exceeded initial business line targets by 500%
   [3] SOC-in-a-Box: Open-source SOC automation framework (Python)
-  [4] Finian (finian.ai): AI-Powered security analysis tool
+  [4] Finian (finian.ai): AI-enabled trading analysis tool
   To browse the full project list, navigate to 'Work' in the main menu.`;
                 break;
             case 'contact':
@@ -433,5 +433,4 @@ function initWorkTabs() {
         });
     });
 }
-
 
